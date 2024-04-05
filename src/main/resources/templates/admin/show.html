@@ -27,8 +27,15 @@
 <p th:text="${'password:' + ': ' + user.getPassword()}">VALUE</p>
 <br/>
 
+<a th:href="@{admin/editUser/{id}(id=${user.id})}">Edit</a>
+
 <br/>
 <br/>
 
+<form th:method="DELETE" th:action="@{admin/delete/{id}(id=${user.id})}">
+    <br/>
+    <br/>
+    <input type="submit" value="Delete"/>
+</form>
 </body>
 </html>
